@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>CV Web</title>
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Raleway&family=Ubuntu&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="starter-page-page">
+
+  <header id="header" class="header dark-background d-flex flex-column justify-content-between">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="header-top">
+      <div class="profile-img">
+  <img src="assets/img/andrea.webp" alt="Foto de perfil" class="img-fluid">
+</div>
+
+      <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+        <h1 class="sitename">Andrea Valladares</h1>
+      </a>
+    </div>
+
+    <!--HTML: menú principal multipàgina -->
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html"><i class="bi bi-house navicon"></i> Inici</a></li>
+        <li><a href="about.html"><i class="bi bi-person navicon"></i> Projecte</a></li>
+        <li><a href="gallery.html"><i class="bi bi-images navicon"></i> Galeria</a></li>
+        <li><a href="table.html"><i class="bi bi-table navicon"></i> Taula</a></li>
+        <li><a href="contact.html" class="active"><i class="bi bi-envelope navicon"></i> Contacte</a></li>
+      </ul>
+    </nav>
+
+    <div class="social-links text-center">
+      <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+      <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+      <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title light-background">
+      <div class="container">
+        <h1>Contacte</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Inici</a></li>
+            <li class="current">Contacte</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!--HTML: secció de contacte amb formulari validat -->
+    <section id="contacte" class="section">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Formulari de contacte</h2>
+          <p>Omple les dades i envia un missatge.</p>
+        </div>
+
+        <!--HTML: formulari (validació amb required + pattern) -->
+        <form class="contact-form" action="#" method="post">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nom">Nom i cognoms *</label>
+              <input
+                type="text"
+                id="nom"
+                name="nom"
+                required
+                pattern="^[A-Za-zÀ-ÿ\s]{3,40}$"
+                placeholder="Ex: Marta Garcia">
+              <small>Només lletres i espais (mínim 3 caràcters).</small>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Correu electrònic *</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                pattern="^[^\s@]+@[^\s@]+\.[^\s@]{2,}$"
+                placeholder="exemple@correu.com">
+              <small>Introdueix un email vàlid.</small>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="telefon">Telèfon</label>
+              <input
+                type="tel"
+                id="telefon"
+                name="telefon"
+                pattern="^[0-9]{9}$"
+                placeholder="Ex: 612345678">
+              <small>9 dígits, sense espais.</small>
+            </div>
+
+            <div class="form-group">
+              <label for="assumpte">Assumpte *</label>
+              <input
+                type="text"
+                id="assumpte"
+                name="assumpte"
+                required
+                pattern="^.{5,60}$"
+                placeholder="Ex: Consulta del projecte">
+              <small>Mínim 5 caràcters.</small>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="missatge">Missatge *</label>
+            <textarea
+              id="missatge"
+              name="missatge"
+              rows="6"
+              required
+              pattern="^.{10,500}$"
+              placeholder="Escriu aquí el teu missatge..."></textarea>
+            <small>Entre 10 i 500 caràcters.</small>
+          </div>
+
+          <button type="submit" class="btn btn-primary">
+            Enviar
+          </button>
+
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer light-background">
+    <div class="container">
+      <h3 class="sitename">Andrea Valladares</h3>
+      <p>Projecte web desenvolupat amb HTML i CSS.</p>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
